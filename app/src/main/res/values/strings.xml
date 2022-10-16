@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidApp</string>
+    <string name="message">Please select the author and year of publication</string>
+    <string name="rb_1937">1937</string>
+    <string name="rb_1939">1939</string>
+    <string name="rb_1953">1953</string>
+    <string name="rb_1968">1968</string>
+    <string name="rb_1982">1982</string>
+    <string name="rb_1997">1997</string>
+    <string name="ok">OK</string>
+    <string name="choice_message">You chose %1$s, year %2$s.</string>
+    <string name="incorrect_input">Please select author and year of publication</string>
+</resources>

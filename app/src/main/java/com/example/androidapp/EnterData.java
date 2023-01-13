@@ -29,39 +29,24 @@ public class EnterData extends Fragment {
     protected String chosen_author = "";
     protected String chosen_publication_year = "";
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    private String mParam1;
-    private String mParam2;
 
     private final static String TAG = "ContentFragment";
 
     public EnterData() {
-        // Required empty public constructor
     }
 
     public static EnterData newInstance(String param1, String param2) {
-        EnterData fragment = new EnterData();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        EnterData fragment = new EnterData();
         fragment.setArguments(args);
-
         Log.d(TAG, "EnterData constructor");
-
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
         Log.d(TAG, "onCreate");
     }
 
@@ -79,8 +64,7 @@ public class EnterData extends Fragment {
         try {
             fragmentSendDataListener = (OnFragmentSendDataListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString()
-                    + " interface OnFragmentInteractionListener");
+            throw new ClassCastException(context.toString());
         }
         Log.d(TAG, "onAttach");
     }
@@ -89,7 +73,6 @@ public class EnterData extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_enter_data, container, false);
     }
 
